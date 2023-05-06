@@ -16,10 +16,7 @@ class FundMe {
    contract: ethers.Contract
 
    constructor() {
-      this.getWeb3Info()
-      this.findElements()
-      this.bindEvents()
-      this.checkConnection()
+      this.init()
    }
 
    private async connect() {
@@ -156,6 +153,13 @@ class FundMe {
          'click',
          this.getBalance.bind(this)
       )
+   }
+
+   private init() {
+      this.getWeb3Info()
+      this.findElements()
+      this.bindEvents()
+      this.checkConnection()
    }
 }
 
