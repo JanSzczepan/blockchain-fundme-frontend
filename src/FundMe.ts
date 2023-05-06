@@ -26,6 +26,7 @@ class FundMe {
          } catch (error) {
             this.addInfo(`Error occured while connecting! Please try again`)
             console.error(error)
+            return
          }
 
          this.addConnectedInfo()
@@ -70,6 +71,7 @@ class FundMe {
          } catch (error) {
             this.addInfo(`Error occured while funding! Please try again`)
             console.error(error)
+            return
          }
 
          this.fundInputElement.value = '0'
@@ -90,6 +92,7 @@ class FundMe {
          } catch (error) {
             this.addInfo(`Error occured while withdrawing! Please try again`)
             console.error(error)
+            return
          }
 
          this.addInfo(`Withdrawn ETH successfully!`)
@@ -111,6 +114,7 @@ class FundMe {
                `Error occured while getting balance! Please try again`
             )
             console.error(error)
+            return
          }
       } else {
          this.addInfo('Please install Metamask!')
